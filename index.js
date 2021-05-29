@@ -19,9 +19,14 @@ app.get('/number/:num', cors(),(req, res)=>{
     
     const num=req.params.num;
     if(num==parseInt(num)){
+        if(String(num).split("").length<17){
     const cal=Math.abs(num)%2===0?"EVEN":"ODD";
     const response=`YOUR NUMBER ${num} IS ${cal}`;
     res.send(`<body style="background-color:orange;margin-top:25%;"><center><h1>${response}</h1></center></body>`);
+        }
+        else{
+            res.send("That number is tooooo big")
+        }
     }
     else{
         res.status(400).send(err400);
