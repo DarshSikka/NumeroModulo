@@ -3,7 +3,6 @@ const cors=require("cors");
 const app=express();
 const fs=require("fs");
 const path=require("path");
-const { RSA_NO_PADDING } = require("constants");
 const home=fs.readFileSync(path.join(__dirname, 'home.html'), {encoding:"utf8"});
 const err400=fs.readFileSync(path.join(__dirname, '400.html'), {encoding:"utf8"});
 const port=process.env.PORT||3000
