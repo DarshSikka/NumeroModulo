@@ -13,9 +13,6 @@ app.get('/', cors(), (req, res)=>{
 app.get('/:id', cors(),(req, res)=>{
     res.send(home)
 })
-app.get('/:id', cors(),(req, res)=>{
-    res.send(home);
-})
 app.get("/number", cors(),(req, res)=>{
     res.send(home);
 })
